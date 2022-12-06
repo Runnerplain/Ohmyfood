@@ -9,6 +9,10 @@ body {
   font-family: "Roboto", sans-serif;
 }
 
+main {
+  padding: 0 1rem;
+}
+
 header {
   font-family: "Shrikhand", sans-serif;
   text-align: center;
@@ -17,7 +21,7 @@ header {
   position: relative;
 }
 
-main .city {
+.city {
   background-color: #eaeaea;
   text-align: center;
   padding: 0.5rem;
@@ -26,31 +30,26 @@ main .city {
   align-items: center;
   gap: 1rem;
 }
-
-main .city i {
+.cityi {
   font-size: 1.5rem;
 }
 
-/* Section h2 & btn */
 .search {
   text-align: center;
   padding-top: 2rem;
 }
-
 .search h2 {
   font-size: 2rem;
 }
-
 .search p {
   font-size: 1.1rem;
 }
-
 .search button {
   margin-top: 1rem;
   padding: 1rem 2rem;
   border-radius: 5rem;
   border: none;
-  background-image: linear-gradient(0deg, rgba(147, 86, 220, 0.9), rgba(255, 121, 218, 0.9));
+  background-image: linear-gradient(#9356DC, #FF79DA);
   color: white;
   font-weight: bold;
   font-size: 1rem;
@@ -58,11 +57,29 @@ main .city i {
   cursor: pointer;
   transition: 100ms;
 }
-
 .search button:hover {
   transform: scale(1.03);
   opacity: 0.9;
   box-shadow: 5px 5px 15px 5px rgba(0, 0, 0, 0.4);
+}
+
+.choice-list ol {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+@media (max-width: 800px) {
+  .choice-list ol {
+    flex-direction: column;
+  }
+}
+.choice-list li {
+  background-color: #f6f6f6;
+  padding: 1rem 2rem;
+  flex-grow: 1;
+  border: 1px solid red;
+  border-radius: 1rem;
+  box-shadow: 5px 5px 15px 5px rgba(0, 0, 0, 0.2);
 }
 
 /*# sourceMappingURL=style.css.map */

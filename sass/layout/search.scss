@@ -1,0 +1,32 @@
+@use "../utils/shadow";
+@use "../utils/colors";
+@use "../utils/hover";
+
+.search {
+    text-align: center;
+    padding-top: 2rem;
+    & h2 {
+      font-size: 2rem;
+    }
+    & p {
+      font-size: 1.1rem;
+    }
+    & button {
+      margin-top: 1rem;
+      padding: 1rem 2rem;
+      border-radius: 5rem;
+      border: none;
+      background-image: linear-gradient(colors.$color-primary, colors.$color-secondary);
+      color: white;
+      font-weight: bold;
+      font-size: 1rem;
+      @include shadow.shadow-one;
+      cursor: pointer;
+      transition: 100ms;
+    }
+  
+    & button:hover {
+      @include hover.hover-btn;
+    }
+  }
+  
