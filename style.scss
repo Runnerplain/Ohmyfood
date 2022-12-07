@@ -1,8 +1,9 @@
-@import "./sass/base.scss";
-@import "./sass/layout/header.scss";
-@import "./sass/layout/city.scss";
-@import "./sass/layout/search.scss";
-@import "./sass/layout/choice-list.scss";
-@import "./sass/utils/colors.scss";
-@import "./sass/utils/hover.scss";
-@import "./sass/utils/shadow.scss";
+@use "./sass/base.scss";
+@use "./sass/layout/header.scss";
+@use "./sass/layout/city.scss";
+@use "./sass/layout/search.scss";
+@use "./sass/layout/choice-list.scss";
+@use "./sass/utils/colors.scss";
+@use "./sass/utils/hover.scss";
+@use "./sass/utils/shadow.scss";
+@use "./sass/layout/restaurant.scss";
