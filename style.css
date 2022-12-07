@@ -39,7 +39,7 @@ header {
   padding-top: 2rem;
 }
 .search h2 {
-  font-size: 2rem;
+  font-size: 1.5rem;
 }
 .search p {
   font-size: 1.1rem;
@@ -63,23 +63,50 @@ header {
   box-shadow: 5px 5px 15px 5px rgba(0, 0, 0, 0.4);
 }
 
+.choice-list {
+  counter-reset: number;
+}
 .choice-list ol {
   display: flex;
-  flex-wrap: wrap;
-  gap: 1rem;
+  gap: 1.5rem;
+  padding: 1rem 0 0 1rem;
 }
 @media (max-width: 800px) {
   .choice-list ol {
     flex-direction: column;
   }
 }
-.choice-list li {
+.choice-list ol li {
+  position: relative;
   background-color: #f6f6f6;
-  padding: 1rem 2rem;
   flex-grow: 1;
-  border: 1px solid red;
   border-radius: 1rem;
+  list-style-type: none;
+  padding: 1.5rem;
+  cursor: pointer;
   box-shadow: 5px 5px 15px 5px rgba(0, 0, 0, 0.2);
+}
+.choice-list ol li::before {
+  content: counter(number);
+  counter-increment: number;
+  color: white;
+  background-color: #9356DC;
+  position: absolute;
+  width: 2rem;
+  height: 2rem;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  bottom: 1rem;
+  left: -1rem;
+}
+.choice-list ol li:hover {
+  transform: scale(1.03);
+  opacity: 0.9;
+  box-shadow: 5px 5px 15px 5px rgba(0, 0, 0, 0.4);
+}
+.choice-list ol i {
+  padding-right: 1.5rem;
 }
 
 /*# sourceMappingURL=style.css.map */
