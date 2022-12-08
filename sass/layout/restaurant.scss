@@ -1,8 +1,61 @@
+@use "../utils/colors";
+@use "../utils/variable";
+
 .restaurant {
-    background-color: #f6f6f6;
+    background-color: colors.$color-quarternary;
+    & h2 {
+        padding:1.5rem 0;
+    }
+
+    .restaurant__cards {
+        display: grid;
+        gap: 2rem;
+        grid-template-columns:repeat(2,1fr);
+        @media (max-width: variable.$breakpoint) {
+            grid-template-columns:repeat(1,1fr);
+        }
+        .new {
+            position: relative;
+        }
+        .new::before {
+            content: "nouveau";
+            position: absolute;
+            width: 5rem;
+            height: 2rem;
+            background-color: colors.$color-tertiary;
+            color: darken(colors.$color-tertiary, 50%);
+            display: grid;
+            place-items: center;
+            right: 1rem;
+            top: 1rem;
+        }
+    }
     
     .cards {
-        border: 1px solid red;
-        height: 4rem;
+        &__img {
+            height: 15rem;
+            background-size: cover;
+            border-radius: 1rem 1rem 0 0;
+        }
+        @for $i from 1 through 4 {
+            &__img-#{$i} {
+            background-image: url(../../assets/resto-#{$i}.jpg);
+            }
+        }
+        &__txt {
+            position: relative;
+            h3,
+            p {
+                margin: 0.5rem 1rem;
+            }
+            i {
+                font-size: 2rem;
+                position: absolute;
+                right: 1rem;
+                top: 50%;
+                transform: translateY(-50%);
+            }
+        
+        }
     }
 }
