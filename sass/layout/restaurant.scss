@@ -49,20 +49,7 @@
             }
         }
         &__txt {
-            position: relative;
-            &::before {
-                @include mixins.heart;
-                
-            }
-            &::after {
-                @include mixins.heart(0, 900, transparent);
-                @include mixins.graduated;
-            
-                
-            }
-            &:hover::after {
-                opacity: 1;
-            }
+        @include mixins.heart-animated;
             h3,
             p {
                 margin: 0.5rem 1rem;

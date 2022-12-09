@@ -18,6 +18,14 @@ h3 {
   margin: auto;
 }
 
+a {
+  text-decoration: none;
+}
+
+a:visited {
+  color: inherit;
+}
+
 header {
   font-family: "Shrikhand", sans-serif;
   text-align: center;
@@ -242,15 +250,27 @@ footer h2 {
   padding: 1rem 0;
 }
 
-img {
-  max-width: 100%;
+.ban_img {
+  width: 100%;
+  max-height: 32rem;
+  object-fit: cover;
+  display: block;
 }
 
-main h2 {
+.menus__main {
+  background-color: #f6f6f6;
+  position: relative;
+  z-index: 1;
+  margin-top: -4rem;
+  padding: 5rem 0 0;
+  border-radius: 3rem 3rem 0 0;
+}
+.menus__main h2 {
   font-family: "Shrikhand", sans-serif;
+  margin: -3rem 2rem;
   position: relative;
 }
-main h2::before {
+.menus__main h2::before {
   display: inline-block;
   font-style: normal;
   font-variant: normal;
@@ -270,7 +290,7 @@ main h2::before {
   opacity: 1;
   transition: 150ms;
 }
-main h2::after {
+.menus__main h2::after {
   display: inline-block;
   font-style: normal;
   font-variant: normal;
@@ -291,8 +311,28 @@ main h2::after {
   transition: 150ms;
   background-image: linear-gradient(0deg, hsl(267deg, 74%, 64%), hsl(321deg, 68.1%, 76%));
 }
-main h2:hover::after {
+.menus__main h2:hover::after {
   opacity: 1;
+}
+
+.menus {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+  padding: 3rem 0;
+}
+.menus .menus__category {
+  border: 1px solid red;
+  background-color: #FFFFFF;
+}
+@media (max-width: 1000px) {
+  .menus {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+
+.contain-page {
+  background-color: #f6f6f6;
 }
 
 /*# sourceMappingURL=style.css.map */

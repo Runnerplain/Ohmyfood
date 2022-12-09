@@ -30,3 +30,20 @@
     opacity: $opacity;
     transition: 150ms;
 }
+@mixin heart-animated {
+
+    position: relative;
+    &::before {
+        @include heart;
+        
+    }
+    &::after {
+        @include heart(0, 900, transparent);
+        @include graduated;
+        
+        
+    }
+    &:hover::after {
+        opacity: 1;
+    }
+}
