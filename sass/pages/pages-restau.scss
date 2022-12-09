@@ -1,0 +1,23 @@
+@use "../utils/mixins";
+
+img {
+    max-width: 100%;
+}
+
+main h2 {
+    font-family: 'Shrikhand', sans-serif;
+    position: relative;
+    &::before {
+        @include mixins.heart;
+        
+    }
+    &::after {
+        @include mixins.heart(0, 900, transparent);
+        @include mixins.graduated;
+    
+        
+    }
+    &:hover::after {
+        opacity: 1;
+    }
+}
