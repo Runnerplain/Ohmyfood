@@ -1,12 +1,13 @@
-@use "../utils/shadow";
+@use "../utils/mixins.scss";
 @use "../utils/colors";
-@use "../utils/hover";
+
 
 .choice-list {
   counter-reset: number;
+  padding: 2rem 1rem;
   & ol {
     display: flex;
-    gap: 1.5rem;
+    gap: 2rem;
     padding: 1rem 0 0 1rem;
     @media (max-width: 1000px) {
     flex-direction: column;
@@ -35,9 +36,9 @@
       list-style-type: none;
       padding: 1.5rem;
       cursor: pointer;
-      @include shadow.shadow-one;
+      @include mixins.shadow-one;
       &:hover {
-        @include hover.hover-btn;
+        @include mixins.hover-btn;
       }
     }
     & i {

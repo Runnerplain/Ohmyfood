@@ -1,8 +1,11 @@
 @use "../utils/colors";
 @use "../utils/variable";
+@use "../utils/mixins.scss";
 
 .restaurant {
     background-color: colors.$color-quarternary;
+    margin-bottom: 2rem;
+    padding: 2rem 1rem;
     & h2 {
         padding:1.5rem 0;
     }
@@ -11,6 +14,7 @@
         display: grid;
         gap: 2rem;
         grid-template-columns:repeat(2,1fr);
+        
         @media (max-width: variable.$breakpoint) {
             grid-template-columns:repeat(1,1fr);
         }
@@ -32,6 +36,8 @@
     }
     
     .cards {
+        background-color: white;
+        border-radius: 1rem;
         &__img {
             height: 15rem;
             background-size: cover;
@@ -44,18 +50,29 @@
         }
         &__txt {
             position: relative;
+            &::before {
+                @include mixins.heart;
+                
+            }
+            &::after {
+                @include mixins.heart(0, 900, transparent);
+                @include mixins.graduated;
+            
+                
+            }
+            &:hover::after {
+                opacity: 1;
+            }
             h3,
             p {
                 margin: 0.5rem 1rem;
             }
-            i {
-                font-size: 2rem;
-                position: absolute;
-                right: 1rem;
-                top: 50%;
-                transform: translateY(-50%);
+            p {
+                margin-bottom: 1rem;
             }
-        
+            h3 {
+                padding-top: 1rem;
+            }
         }
     }
 }
