@@ -8,7 +8,7 @@
     }
     
 @mixin shadow-one {
-    box-shadow: 5px 5px 15px 5px rgba(0, 0, 0, 0.2);
+    box-shadow: 0.25rem 0.25rem 1rem rgb(0 0 0 / 10%)
     }
 @mixin heart($opacity: 1, $font-weight: 400, $color: black) {
     display: inline-block;
