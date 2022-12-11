@@ -13,18 +13,7 @@
       font-size: 1.1rem;
     }
     & button {
-      margin-top: 1rem;
-      padding: 1rem 2rem;
-      border-radius: 5rem;
-      border: none;
-      color: white;
-      font-weight: bold;
-      font-size: 1rem;
-      margin-bottom: 2rem;
-      @include mixins.shadow-one;
-      @include mixins.graduated;
-      cursor: pointer;
-      transition: 100ms;
+      @include mixins.bouton-one;
     }
   
     & button:hover {

@@ -3,6 +3,19 @@
 @use "../utils/variable";
 @use "../utils/animation";
 
+.nav-page{
+    position: relative;
+}
+.nav-page::before {
+    @include mixins.font-awesome(900);
+    content: "\f060";
+    position: absolute;
+    left: 2rem;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 25px;
+
+}
 
 .ban_img {
     width: 100%;
@@ -32,25 +45,29 @@
     padding: 3rem 1rem;
     background-color: colors.$color-quarternary;
     .menus__title {
-        font-weight: 500;
+        font-weight: 400;
         margin: 0;
         padding-bottom: 0.5rem;
         position: relative;
+        text-transform: uppercase;
     }
     .menus__title::after {
-    content: "";
-    width: 3rem;
-    height: 0.25rem;
-    background-color: #99e2d0;
+        content: "";
+        width: 3rem;
+        height: 0.25rem;
+        background-color: #99e2d0;
     position: absolute;
     left: 0;
     bottom: 0;
     }
+
     .menus__category {
         background-color: colors.$color-white;
         border-radius: 1rem;
         overflow: hidden;
+        cursor: pointer;
         @include mixins.shadow-one;
+        animation: appear 1s;
     }
     @media (max-width: variable.$breakpoint) {
         grid-template-columns: repeat(1,1fr);
@@ -58,6 +75,7 @@
         .menu-sub {
             display: flex;
             border-radius: 1rem;
+        }
                 .menu-sub__txt {
                 padding: 1rem;
                 overflow: hidden;
@@ -67,8 +85,8 @@
                     text-overflow: ellipsis;
                     white-space: nowrap;
                 }
-            }
-            }
+                }
+            
             .menu-sub__prix {
                 margin-left: auto;
                 font-weight: 900;
@@ -106,9 +124,22 @@
                 animation: spin 500ms;
             }
         }
+    }
+    
 
 .contain-page {
     background-color: colors.$color-quarternary;
 }
 
+
+section.order-btn {
+    height: 20vh;
+    display: grid;
+    place-items: center;
+    & button {
+        @include mixins.bouton-one;
+    }
+    & button:hover {
+        @include mixins.hover-btn;
+    }
 }

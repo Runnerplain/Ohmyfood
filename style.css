@@ -68,10 +68,10 @@ header {
   font-weight: bold;
   font-size: 1rem;
   margin-bottom: 2rem;
-  box-shadow: 0.25rem 0.25rem 1rem rgba(0, 0, 0, 0.1);
-  background-image: linear-gradient(0deg, hsl(267deg, 74%, 64%), hsl(321deg, 68.1%, 76%));
   cursor: pointer;
   transition: 100ms;
+  box-shadow: 0.25rem 0.25rem 1rem rgba(0, 0, 0, 0.1);
+  background-image: linear-gradient(0deg, hsl(267deg, 74%, 64%), hsl(321deg, 68.1%, 76%));
 }
 .search button:hover {
   transform: scale(1.03);
@@ -127,6 +127,14 @@ header {
   padding-right: 1.5rem;
 }
 
+@keyframes appear {
+  0% {
+    transform: scale(0);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
 .restaurant {
   background-color: #f6f6f6;
   margin-bottom: 2rem;
@@ -250,6 +258,26 @@ footer h2 {
   padding: 1rem 0;
 }
 
+.nav-page {
+  position: relative;
+}
+
+.nav-page::before {
+  display: inline-block;
+  font-style: normal;
+  font-variant: normal;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  content: "\f060";
+  position: absolute;
+  left: 2rem;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 25px;
+}
+
 .ban_img {
   width: 100%;
   max-height: 32rem;
@@ -323,10 +351,11 @@ footer h2 {
   background-color: #f6f6f6;
 }
 .menus .menus__title {
-  font-weight: 500;
+  font-weight: 400;
   margin: 0;
   padding-bottom: 0.5rem;
   position: relative;
+  text-transform: uppercase;
 }
 .menus .menus__title::after {
   content: "";
@@ -341,7 +370,9 @@ footer h2 {
   background-color: #FFFFFF;
   border-radius: 1rem;
   overflow: hidden;
+  cursor: pointer;
   box-shadow: 0.25rem 0.25rem 1rem rgba(0, 0, 0, 0.1);
+  animation: appear 1s;
 }
 @media (max-width: 1000px) {
   .menus {
@@ -352,11 +383,11 @@ footer h2 {
   display: flex;
   border-radius: 1rem;
 }
-.menus .menu-sub .menu-sub__txt {
+.menus .menu-sub__txt {
   padding: 1rem;
   overflow: hidden;
 }
-.menus .menu-sub .menu-sub__txt h4, .menus .menu-sub .menu-sub__txt p {
+.menus .menu-sub__txt h4, .menus .menu-sub__txt p {
   margin: 0;
   overflow: hidden;
   text-overflow: ellipsis;
@@ -402,8 +433,34 @@ footer h2 {
     transform: rotate(0deg);
   }
 }
-.menus .contain-page {
+
+.contain-page {
   background-color: #f6f6f6;
+}
+
+section.order-btn {
+  height: 20vh;
+  display: grid;
+  place-items: center;
+}
+section.order-btn button {
+  margin-top: 1rem;
+  padding: 1rem 2rem;
+  border-radius: 5rem;
+  border: none;
+  color: white;
+  font-weight: bold;
+  font-size: 1rem;
+  margin-bottom: 2rem;
+  cursor: pointer;
+  transition: 100ms;
+  box-shadow: 0.25rem 0.25rem 1rem rgba(0, 0, 0, 0.1);
+  background-image: linear-gradient(0deg, hsl(267deg, 74%, 64%), hsl(321deg, 68.1%, 76%));
+}
+section.order-btn button:hover {
+  transform: scale(1.03);
+  opacity: 0.9;
+  box-shadow: 5px 5px 15px 5px rgba(0, 0, 0, 0.4);
 }
 
 /*# sourceMappingURL=style.css.map */
