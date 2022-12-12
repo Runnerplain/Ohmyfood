@@ -23,8 +23,13 @@ h3 {
 
 a {
     text-decoration: none;
+    color: inherit;
     
 }
 a:visited {
     color: inherit;
+}
+
+.mailto:hover {
+    color: #FF79DA;
 }

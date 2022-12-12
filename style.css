@@ -20,10 +20,15 @@ h3 {
 
 a {
   text-decoration: none;
+  color: inherit;
 }
 
 a:visited {
   color: inherit;
+}
+
+.mailto:hover {
+  color: #FF79DA;
 }
 
 header {
@@ -400,7 +405,6 @@ footer h2 {
 }
 .menus .menus__group-1 {
   animation: appear 1s cubic-bezier(0.5, 1.58, 0.34, 0.82);
-  animation-play-state: running;
   display: grid;
   gap: 1rem;
 }
