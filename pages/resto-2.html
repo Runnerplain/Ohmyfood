@@ -1,24 +1,23 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="apple-touch-icon" sizes="180x180" href="./../assets/favicon/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="./../assets/favicon/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="./../assets/favicon/favicon-16x16.png">
-    <link rel="manifest" href="/site.webmanifest">
-    <title>La palette du goût</title>
-    <script
-    src="https://kit.fontawesome.com/cbcef56d7b.js"
-    crossorigin="anonymous"
-  ></script>
-  <link rel="stylesheet" href="../style.css" />
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="apple-touch-icon" sizes="180x180" href="./../assets/favicon/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="./../assets/favicon/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="./../assets/favicon/favicon-16x16.png">
+  <link rel="manifest" href="/site.webmanifest">
+  <title>La palette du goût</title>
+  <script src="https://kit.fontawesome.com/cbcef56d7b.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="../style.css">
 </head>
+
 <body>
   <a href="./../index.html">
     <header class="nav-page">
-      
+
       <h1>Ohmyfood</h1>
     </header>
   </a>
@@ -31,7 +30,8 @@
     </div>
     <main>
       <section class="menus">
-        <h3 class="menus__title">Entrées</h3>
+        <div class="menus__group-1">
+          <h3 class="menus__title">Entrées</h3>
           <div class="menus__category">
             <div class="menu-sub">
               <div class="menu-sub__txt">
@@ -42,7 +42,7 @@
               <div class="menu-sub__check">
                 <i class="fa-solid fa-check"></i>
               </div>
-          
+
             </div>
           </div>
           <div class="menus__category">
@@ -55,7 +55,7 @@
               <div class="menu-sub__check">
                 <i class="fa-solid fa-check"></i>
               </div>
-          
+
             </div>
           </div>
           <div class="menus__category">
@@ -82,87 +82,91 @@
               </div>
             </div>
           </div>
+        </div>
+        <div class="menus__group-2">
           <h3 class="menus__title">Plats</h3>
-            <div class="menus__category">
-              <div class="menu-sub">
-                <div class="menu-sub__txt">
-                  <h4>Nois de coquillles Saint-Jacques</h4>
-                  <p>Sur lit de purée de céleri-rave</p>
-                </div>
-                <span class="menu-sub__prix">40€</span>
-                <div class="menu-sub__check">
-                  <i class="fa-solid fa-check"></i>
-                </div>
+          <div class="menus__category">
+            <div class="menu-sub">
+              <div class="menu-sub__txt">
+                <h4>Nois de coquillles Saint-Jacques</h4>
+                <p>Sur lit de purée de céleri-rave</p>
               </div>
+              <span class="menu-sub__prix">40€</span>
+              <div class="menu-sub__check">
+                <i class="fa-solid fa-check"></i>
+              </div>
+            </div>
           </div>
-            <div class="menus__category">
-                <div class="menu-sub">
-                  <div class="menu-sub__txt">
-                    <h4>Langoustine poêlée</h4>
-                    <p>Purée de patate douce</p>
-                  </div>
-                  <span class="menu-sub__prix">35€</span>
-                  <div class="menu-sub__check">
-                    <i class="fa-solid fa-check"></i>
-                  </div>
-                </div>
-            </div>
-              <div class="menus__category">
-                  <div class="menu-sub">
-                    <div class="menu-sub__txt">
-                      <h4>Mijoté de queue de boeuf</h4>
-                      <p>Et riz sauvage aux zestes de citron</p>
-                    </div>
-                    <span class="menu-sub__prix">44€</span>
-                    <div class="menu-sub__check">
-                      <i class="fa-solid fa-check"></i>
-                    </div>
-                  </div>
+          <div class="menus__category">
+            <div class="menu-sub">
+              <div class="menu-sub__txt">
+                <h4>Langoustine poêlée</h4>
+                <p>Purée de patate douce</p>
               </div>
-              <h3 class="menus__title">Desserts</h3>
-            <div class="menus__category">
-                  <div class="menu-sub">
-                    <div class="menu-sub__txt">
-                      <h4>Macaron noisette et chocolat</h4>
-                      <p>Glace au caramel brun et sel de Guérande</p>
-                    </div>
-                    <span class="menu-sub__prix">18€</span>
-                    <div class="menu-sub__check">
-                      <i class="fa-solid fa-check"></i>
-                    </div>
-                  </div>
-            </div>
-              <div class="menus__category">
-                  <div class="menu-sub">
-                    <div class="menu-sub__txt">
-                      <h4>Baba au rhum revisité</h4>
-                      <p>Avec son coulis de citron</p>
-                    </div>
-                    <span class="menu-sub__prix">22€</span>
-                    <div class="menu-sub__check">
-                      <i class="fa-solid fa-check"></i>
-                    </div>
-                  </div>
-              </div>
-              <div class="menus__category">
-                  <div class="menu-sub">
-                    <div class="menu-sub__txt">
-                      <h4>Tarte au citron meringuée</h4>
-                      <p>Destructurée</p>
-                    </div>
-                    <span class="menu-sub__prix">23€</span>
-                    <div class="menu-sub__check">
-                      <i class="fa-solid fa-check"></i>
-                    </div>
-                  </div>
+              <span class="menu-sub__prix">35€</span>
+              <div class="menu-sub__check">
+                <i class="fa-solid fa-check"></i>
               </div>
             </div>
-        </section>
-    </main>
+          </div>
+          <div class="menus__category">
+            <div class="menu-sub">
+              <div class="menu-sub__txt">
+                <h4>Mijoté de queue de boeuf</h4>
+                <p>Et riz sauvage aux zestes de citron</p>
+              </div>
+              <span class="menu-sub__prix">44€</span>
+              <div class="menu-sub__check">
+                <i class="fa-solid fa-check"></i>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="menus__group-3">
+          <h3 class="menus__title">Desserts</h3>
+          <div class="menus__category">
+            <div class="menu-sub">
+              <div class="menu-sub__txt">
+                <h4>Macaron noisette et chocolat</h4>
+                <p>Glace au caramel brun et sel de Guérande</p>
+              </div>
+              <span class="menu-sub__prix">18€</span>
+              <div class="menu-sub__check">
+                <i class="fa-solid fa-check"></i>
+              </div>
+            </div>
+          </div>
+          <div class="menus__category">
+            <div class="menu-sub">
+              <div class="menu-sub__txt">
+                <h4>Baba au rhum revisité</h4>
+                <p>Avec son coulis de citron</p>
+              </div>
+              <span class="menu-sub__prix">22€</span>
+              <div class="menu-sub__check">
+                <i class="fa-solid fa-check"></i>
+              </div>
+            </div>
+          </div>
+          <div class="menus__category">
+            <div class="menu-sub">
+              <div class="menu-sub__txt">
+                <h4>Tarte au citron meringuée</h4>
+                <p>Destructurée</p>
+              </div>
+              <span class="menu-sub__prix">23€</span>
+              <div class="menu-sub__check">
+                <i class="fa-solid fa-check"></i>
+              </div>
+            </div>
+          </div>
+        </div>
+    </section>
+  </main>
   </div>
-  <section class="order-btn">
+  <div class="order-btn">
     <button>Commander</button>
-  </section>
+  </div>
 
 
   <footer class="restau__footer">
@@ -183,4 +187,5 @@
     </div>
   </footer>
 </body>
+
 </html>
