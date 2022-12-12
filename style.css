@@ -34,6 +34,34 @@ header {
   position: relative;
 }
 
+.loader {
+  display: grid;
+  place-items: center;
+  background-color: #ffffff;
+  opacity: 0.8;
+  z-index: 1;
+  height: 100vh;
+  position: fixed;
+  inset: 0;
+  animation: gone 200ms 1200ms forwards;
+  transform-origin: bottom;
+}
+.loader::after {
+  content: "";
+  height: 50px;
+  width: 50px;
+  border-right: 5px solid #FF79DA;
+  border-left: 5px solid #9356DC;
+  border-radius: 50%;
+  animation: spin 300ms ease-in-out;
+  animation-iteration-count: 4;
+}
+
+@keyframes gone {
+  to {
+    transform: scale(0);
+  }
+}
 .city {
   background-color: #eaeaea;
   text-align: center;
@@ -210,7 +238,7 @@ header {
   background-clip: text;
   -webkit-background-clip: text;
   opacity: 1;
-  transition: 150ms;
+  transition: 500ms;
 }
 .restaurant .cards__txt::after {
   display: inline-block;
@@ -230,7 +258,7 @@ header {
   background-clip: text;
   -webkit-background-clip: text;
   opacity: 0;
-  transition: 150ms;
+  transition: 500ms;
   background-image: linear-gradient(0deg, hsl(267deg, 74%, 64%), hsl(321deg, 68.1%, 76%));
 }
 .restaurant .cards__txt:hover::after {
@@ -316,7 +344,7 @@ footer h2 {
   background-clip: text;
   -webkit-background-clip: text;
   opacity: 1;
-  transition: 150ms;
+  transition: 500ms;
 }
 .menus__title h2::after {
   display: inline-block;
@@ -336,7 +364,7 @@ footer h2 {
   background-clip: text;
   -webkit-background-clip: text;
   opacity: 0;
-  transition: 150ms;
+  transition: 500ms;
   background-image: linear-gradient(0deg, hsl(267deg, 74%, 64%), hsl(321deg, 68.1%, 76%));
 }
 .menus__title h2:hover::after {

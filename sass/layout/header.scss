@@ -1,3 +1,6 @@
+@use "../utils/colors";
+
+
 header {
     font-family: 'Shrikhand', sans-serif;
     text-align: center;
@@ -5,4 +8,36 @@ header {
     padding: 0.3rem;
     position: relative;
     
+}
+
+
+.loader {
+    $animation-duration: 300ms;
+    $animation-count: 4;
+    display: grid;
+    place-items: center;
+    background-color: #ffffff;
+    opacity: 0.8;
+    z-index: 1;
+    height: 100vh;
+    position: fixed;
+    inset: 0;
+    animation: gone 200ms $animation-duration * $animation-count forwards;
+    transform-origin: bottom;
+    &::after {
+        content: "";
+        height: 50px;
+        width: 50px;
+        border-right: 5px solid colors.$color-secondary;
+        border-left: 5px solid colors.$color-primary;
+        border-radius: 50%;
+        animation: spin $animation-duration ease-in-out;
+        animation-iteration-count: $animation-count ;
+    }
+}
+
+@keyframes gone {
+    to {
+        transform: scale(0);
+    }
 }
