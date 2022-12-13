@@ -211,16 +211,16 @@ header {
   border-radius: 1rem 1rem 0 0;
 }
 .restaurant .cards__img-1 {
-  background-image: url(../../assets/resto-1.jpg);
+  background-image: url(../assets/resto-1.jpg);
 }
 .restaurant .cards__img-2 {
-  background-image: url(../../assets/resto-2.jpg);
+  background-image: url(../assets/resto-2.jpg);
 }
 .restaurant .cards__img-3 {
-  background-image: url(../../assets/resto-3.jpg);
+  background-image: url(../assets/resto-3.jpg);
 }
 .restaurant .cards__img-4 {
-  background-image: url(../../assets/resto-4.jpg);
+  background-image: url(../assets/resto-4.jpg);
 }
 .restaurant .cards__txt {
   position: relative;

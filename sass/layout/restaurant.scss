@@ -45,7 +45,7 @@
         }
         @for $i from 1 through 4 {
             &__img-#{$i} {
-            background-image: url(../../assets/resto-#{$i}.jpg);
+            background-image: url(../assets/resto-#{$i}.jpg);
             }
         }
         &__txt {
