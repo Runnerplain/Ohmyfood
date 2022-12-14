@@ -44,8 +44,10 @@
     padding: 3rem 1rem;
     background-color: colors.$color-quarternary;
     display: flex;
+    align-items: flex-start;
     @media (max-width: variable.$breakpoint) {
         flex-direction: column;
+        align-items: inherit;
     }
     .menus__title {
         font-weight: 400;
@@ -66,17 +68,20 @@
     .menus__group-1 {
         animation : appear 1s cubic-bezier(.5,1.58,.34,.82);
         display: grid;
+        align-items: flex-start;
         gap: 1rem;
     }
     .menus__group-2 {
         animation: appear 2s cubic-bezier(.5,1.58,.34,.82);
         display: grid;
         gap: 1rem;
+        align-items: flex-start;
     }
     .menus__group-3 {
         animation:  appear 3s cubic-bezier(.5,1.58,.34,.82);
         display: grid;
         gap: 1rem;
+        align-items: flex-start;
     }
 
     .menus__category {
