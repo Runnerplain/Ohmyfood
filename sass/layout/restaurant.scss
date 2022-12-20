@@ -4,10 +4,10 @@
 
 .restaurant {
     background-color: colors.$color-quarternary;
-    margin-bottom: 2rem;
     padding: 2rem 1rem;
+    padding-bottom: 4rem;
     & h2 {
-        padding:1.5rem 0;
+        padding:0.5rem 0;
     }
 
     .restaurant__cards {
@@ -39,8 +39,9 @@
         background-color: white;
         border-radius: 1rem;
         &__img {
-            height: 15rem;
+            height: 12rem;
             background-size: cover;
+            background-position: center;
             border-radius: 1rem 1rem 0 0;
         }
         @for $i from 1 through 4 {

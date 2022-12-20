@@ -9,6 +9,12 @@ body {
   font-family: "Roboto", sans-serif;
 }
 
+h1 {
+  font-size: 1.8rem;
+  margin: auto;
+  padding-top: 1rem;
+}
+
 h3 {
   margin: 0.5rem 0;
 }
@@ -70,7 +76,6 @@ header {
 .city {
   background-color: #eaeaea;
   text-align: center;
-  padding: 1rem;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -78,6 +83,9 @@ header {
 }
 .cityi {
   font-size: 1.5rem;
+}
+.city h2 {
+  font-size: 1.2rem;
 }
 
 .search {
@@ -170,11 +178,11 @@ header {
 }
 .restaurant {
   background-color: #f6f6f6;
-  margin-bottom: 2rem;
   padding: 2rem 1rem;
+  padding-bottom: 4rem;
 }
 .restaurant h2 {
-  padding: 1.5rem 0;
+  padding: 0.5rem 0;
 }
 .restaurant .restaurant__cards {
   display: grid;
@@ -206,8 +214,9 @@ header {
   border-radius: 1rem;
 }
 .restaurant .cards__img {
-  height: 15rem;
+  height: 12rem;
   background-size: cover;
+  background-position: center;
   border-radius: 1rem 1rem 0 0;
 }
 .restaurant .cards__img-1 {
@@ -313,7 +322,7 @@ footer h2 {
 
 .ban_img {
   width: 100%;
-  max-height: 32rem;
+  max-height: 18rem;
   object-fit: cover;
   display: block;
 }
@@ -328,7 +337,7 @@ footer h2 {
 }
 .menus__title h2 {
   font-family: "Shrikhand", sans-serif;
-  margin: -3rem 2rem;
+  margin: -4rem 1rem -5.5rem;
   position: relative;
 }
 .menus__title h2::before {
@@ -389,14 +398,16 @@ footer h2 {
     align-items: inherit;
   }
 }
-.menus .menus__title {
+.menus .menus__title_sub {
   font-weight: 400;
   margin: 30px 0;
   padding-bottom: 0.5rem;
   position: relative;
   text-transform: uppercase;
+  z-index: 1;
+  margin: 3rem 0 0;
 }
-.menus .menus__title::after {
+.menus .menus__title_sub::after {
   content: "";
   width: 3rem;
   height: 0.25rem;
@@ -455,8 +466,8 @@ footer h2 {
   display: grid;
   place-items: center;
   background-color: #99E2D0;
-  margin-right: -4rem;
-  width: 4rem;
+  margin-right: -3.5rem;
+  width: 3.5rem;
   border-radius: 0 1rem 1rem 0;
   transition: all 350ms;
   flex-shrink: 0;
@@ -464,11 +475,9 @@ footer h2 {
 .menus .menu-sub__check i {
   display: grid;
   place-items: center;
-  background: white;
   height: 1rem;
   width: 1rem;
-  border-radius: 1rem;
-  color: #99E2D0;
+  color: #f6f6f6;
 }
 .menus .menu-sub:hover .menu-sub__check {
   margin-right: 0;
@@ -490,9 +499,9 @@ footer h2 {
 }
 
 .order-btn {
-  height: 20vh;
   display: grid;
   place-items: center;
+  background-color: #f6f6f6;
 }
 .order-btn button {
   margin-top: 1rem;
@@ -512,6 +521,9 @@ footer h2 {
   transform: scale(1.03);
   opacity: 0.9;
   box-shadow: 5px 5px 15px 5px rgba(0, 0, 0, 0.4);
+}
+.order-btn .btn_page {
+  margin-top: 0;
 }
 
 /*# sourceMappingURL=style.css.map */

@@ -19,7 +19,7 @@
 
 .ban_img {
     width: 100%;
-    max-height: 32rem;
+    max-height: 18rem;
     object-fit: cover;
     display: block;
 }
@@ -33,7 +33,7 @@
     border-radius: 3rem 3rem 0 0;
     h2 {
         font-family: 'Shrikhand', sans-serif;
-        margin: -3rem 2rem;
+        margin: -4rem 1rem -5.5rem;
         @include mixins.heart-animated;
     }
 }
@@ -49,14 +49,16 @@
         flex-direction: column;
         align-items: inherit;
     }
-    .menus__title {
+    .menus__title_sub {
         font-weight: 400;
         margin: 30px 0;
         padding-bottom: 0.5rem;
         position: relative;
         text-transform: uppercase;
+        z-index: 1;
+        margin: 3rem 0 0;
     }
-    .menus__title::after {
+    .menus__title_sub::after {
         content: "";
         width: 3rem;
         height: 0.25rem;
@@ -117,7 +119,7 @@
             .menu-sub__check {
                 display: grid;
                 place-items: center;
-                $button-width: 4rem;
+                $button-width: 3.5rem;
                 background-color: colors.$color-tertiary;
                 margin-right: -$button-width;
                 width: $button-width;
@@ -128,11 +130,9 @@
                     $size: 1rem;
                     display: grid;
                     place-items: center;
-                    background: white;
                     height: $size;
                     width: $size;
-                    border-radius: 1rem;
-                    color: colors.$color-tertiary
+                    color: colors.$color-quarternary
                 }
             }
             .menu-sub:hover {
@@ -153,13 +153,17 @@
 
 
 .order-btn {
-    height: 20vh;
     display: grid;
     place-items: center;
+    background-color: colors.$color-quarternary;
     & button {
         @include mixins.bouton-one;
     }
     & button:hover {
         @include mixins.hover-btn;
     }
+    .btn_page {
+        margin-top: 0;
+    }
 }
+
